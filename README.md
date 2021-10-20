@@ -4,6 +4,7 @@ A set of my "must have" scripts.
 1) To save anaconda envs go to your favourite dir and launch the backup script.
 
 2) Uninstall anaconda:
+
 uninstall anaconda
 rm -rf ~/anaconda3
 conda uninstall
