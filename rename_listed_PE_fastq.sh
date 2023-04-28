@@ -11,7 +11,7 @@ usage() {
     echo ""
     echo "Options:"
     echo "  -h               Print this help message"
-    echo "  -i input_dir     Input directory containing FASTQ files"
+    echo "  -i input_dir     Input directory containing gzip compressed FASTQ files with *_R1/R2.fastq.gz extension"
     echo "  -t tab_file      Tab-separated file containing old and new names"
     echo ""
     exit 1
