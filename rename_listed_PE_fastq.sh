@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# A Bash script for renaming fastq files in folder basing on the old and new basenames in the text file.
+# Bash script to rename fastq files in a folder based on old and new base names in a text file.
 # JanG (DNA Sequencing Facility IBB PAS Poland), ChatGPT, 26.04.2023
 
 
