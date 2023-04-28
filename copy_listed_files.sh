@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Bash script for copying files from one folder into another basing on file basename provided in text file.
-# JanG (DNA Sequencing Facility IBB PAS Poland), ChatGPT, 28.04.2023
+# A Bash script to copy files from one folder to another based on a base filename given in a text file.
+# Authors: JanG (DNA Sequencing Facility IBB PAS Poland), ChatGPT - 28.04.2023
 
 
 
