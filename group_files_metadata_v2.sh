@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Bash script to copy files in a folders based on column 2 in a tab-separated metadata text file.
+# I wrote this script to copy and group large amount of files into desired category folders.
+# Column 1 in metadata: sampleID (sampleID_assembly.fas etc.)
+# Column 2 in metadata: grouping information such as: ST type, bad or good etc.
+# JanG (DNA Sequencing Facility IBB PAS Poland), ChatGPT, 13.07.2023
+
+
 # Function to display usage instructions
 usage() {
     echo "Usage: $0 [-m metadata_file] [-t target_folder]"
