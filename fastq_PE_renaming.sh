@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # shell script to rename PE MiSeq *.fastq.gz sequence read files to raw name_R1.fastq.gz and name_R2.fastq.gz
-
+# JanG oligo.pl - IBB PAS
 
 echo "Starting renaming of fastq.gz samples "
 
