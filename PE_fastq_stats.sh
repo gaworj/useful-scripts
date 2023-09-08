@@ -103,8 +103,8 @@ print_statistics() {
     echo -e "$sample_name\t$formatted_reads1\t$formatted_total_nucleotides" >> "$output_file"
 }
 
-# Process each pair of FASTQ files in the directory
-for pair in "$fastq_pairs_dir"/*_R1.fastq.gz; do
+# Process each pair of FASTQ files in the directory, sorted numerically
+for pair in $(find "$fastq_pairs_dir" -maxdepth 1 -type f -name "*_R1.fastq.gz" | sort -n); do
     if [[ -f "$pair" ]]; then
         # Generate the corresponding R2 file name
         fastq1="$pair"
@@ -129,4 +129,6 @@ echo -e "\e[92mStatistics have been written to $output_file\e[0m"
 
 
 # Print summarized results to the console
+echo "--------------------------------------"
+echo -e "\e[93mStatistics for paired-end FASTQ files:\e[0m"
 cat "$output_file"
