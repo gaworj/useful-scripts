@@ -96,7 +96,7 @@ print_statistics() {
 
     # Create a tab-separated output file with a header
     if [ ! -e "$output_file" ]; then
-        echo -e "sample name\tnumber of sequences\tsum_length" > "$output_file"
+        echo -e "sample_name\tnumber_of_sequences\tsum_length" > "$output_file"
     fi
 
     # Append results to the output file with formatted read count and total nucleotides
@@ -104,7 +104,7 @@ print_statistics() {
 }
 
 # Process each pair of FASTQ files in the directory, sorted numerically
-for pair in $(find "$fastq_pairs_dir" -maxdepth 1 -type f -name "*_R1.fastq.gz" | sort -n); do
+for pair in $(find "$fastq_pairs_dir" -maxdepth 1 -type f -name "*_R1.fastq.gz" | sort -V); do
     if [[ -f "$pair" ]]; then
         # Generate the corresponding R2 file name
         fastq1="$pair"
@@ -125,8 +125,6 @@ for pair in $(find "$fastq_pairs_dir" -maxdepth 1 -type f -name "*_R1.fastq.gz" 
 done
 
 echo -e "\e[92mStatistics have been written to $output_file\e[0m"
-
-
 
 # Print summarized results to the console
 echo "--------------------------------------"
