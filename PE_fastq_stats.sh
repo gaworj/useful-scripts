@@ -82,7 +82,7 @@ print_statistics() {
     # Function to count nucleotides in a FASTQ file
     count_nucleotides() {
         local file="$1"
-        local nucleotides=$(zcat "$file" | tr -d '\n' | wc -c)
+        local nucleotides=$(zcat "$file" | paste - - - - | cut -f2 | wc -c) 
         echo "$nucleotides"
     }
 
